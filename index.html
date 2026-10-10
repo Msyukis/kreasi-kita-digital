@@ -197,9 +197,11 @@ function kirimEmail() {
   const pesan = ambilPesan();
   if (!pesan) return;
 
-  const url = "https://mail.google.com/mail/?view=cm&fs=1"
-    + "&to=muhammadsyukissssa@gmail.com"
-    + "&su=" + encodeURIComponent("Pertanyaan Layanan KreasiKita Digital")
+  const tujuan = "muhammadsyukissssa@gmail.com";
+  const subjek = "Pertanyaan Layanan KreasiKita Digital";
+
+  const url = "mailto:" + tujuan
+    + "?subject=" + encodeURIComponent(subjek)
     + "&body=" + encodeURIComponent(pesan);
 
   window.location.href = url;
