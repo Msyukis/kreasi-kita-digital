@@ -193,16 +193,16 @@ function kirimWhatsApp(){
   window.open(url, "_blank");
 }
 
-function kirimEmail(){
+function kirimEmail() {
   const pesan = ambilPesan();
   if (!pesan) return;
 
   const url = "https://mail.google.com/mail/?view=cm&fs=1"
-    + "&to=muhammadsyukissssa%40gmail.com"
+    + "&to=muhammadsyukissssa@gmail.com"
     + "&su=" + encodeURIComponent("Pertanyaan Layanan KreasiKita Digital")
     + "&body=" + encodeURIComponent(pesan);
 
-  window.open(url, "_blank");
+  window.location.href = url;
 }
 </script>
 </body>
