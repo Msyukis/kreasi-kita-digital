@@ -195,11 +195,14 @@ function kirimWhatsApp(){
 
 function kirimEmail(){
   const pesan = ambilPesan();
-  if(!pesan) return;
-  const url = "mailto:muhammadsyukissssa@gmail.com"
-    + "?subject=" + encodeURIComponent("Pertanyaan Layanan KreasiKita Digital")
+  if (!pesan) return;
+
+  const url = "https://mail.google.com/mail/?view=cm&fs=1"
+    + "&to=muhammadsyukissssa%40gmail.com"
+    + "&su=" + encodeURIComponent("Pertanyaan Layanan KreasiKita Digital")
     + "&body=" + encodeURIComponent(pesan);
-  window.location.href = url;
+
+  window.open(url, "_blank");
 }
 </script>
 </body>
